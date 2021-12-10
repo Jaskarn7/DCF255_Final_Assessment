@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Jaskarn Singh
+    </title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="info.css">
+    <script src="info.js"></script>
+</head>
+<body>
+    <header>
+        <div id="titleDiv">
+            <p id="title">Sign Up</p>
+        </div>
+    </header>
+    <div id="formData">
+        <form id="form" name="signup" action="https://httpbin.org/post" method="post">
+            <input id="FirstName" name="first-name" placeholder="First Name" pattern="^[A-Z][a-z]*$" required>
+            <br><br>
+            <input id="LastName" name="last-name" placeholder="Last Name" pattern="^[A-Z][a-z]*$" required>
+            <br><br>
+            <input id="Username" name="username" placeholder="Username" required>
+            <br><br>
+            <input id="Password" name="password" placeholder="Password" type="password" required>
+            <br><br>
+            <input id="RePassword" placeholder="Retype Password" type="password" required>
+            <p>Select your education status</p>
+            <div id="radioButtons">
+            <input type="radio" name="educational-status" id="graduated" value="Graduated">
+            <label for="graduated">Graduated</label>
+            <input type="radio" name="educational-status" id="current-enrolled" value="Current Enrolled">
+            <label for="current-enrolled">Current Enrolled</label>
+            <input type="radio" name="educational-status" id="did-not-graduate" value="Did not Graduate">
+            <label for="did-not-graduate">Did not Graduate</label>
+            </div>
+            <br><br>
+            <input type="email" name="email" placeholder="Email" required>
+            <br><br>
+            <input type="number" name="age" id="age" placeholder="Age" min="18" max="60">
+            <br><br>
+            <span id="workButtons">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </span>
+        <input type="hidden" name="lastName" id="lastName" value="Singh" /> 
+        <input type="hidden" name="studentId" id="studentId" value="154273205" />
+        </form>
+        <div id="errors">
+            <h2>Errors</h2>
+            <ol id='error-list'></ol>
+        </div>
+    </div>
+</body>
+</html>
